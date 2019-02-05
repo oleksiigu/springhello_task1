@@ -31,7 +31,7 @@ public class RndGenerator {
     }
 
     // Generates random value each second
-    @Scheduled(fixedRate = 1000)
+    @Scheduled(initialDelay = 1000, fixedRate = 1000)
     public void generateRandomValue(){
         RndInfo eventInfo = new RndInfo(randomGenerator.nextInt(UPPER_BOUND));
 

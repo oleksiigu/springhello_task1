@@ -24,7 +24,7 @@ public class RndFileWriter {
             }
         }
         catch (IOException exc){
-            System.out.println(String.format("RndFileWriter - IO Exception occured: %s", exc.getMessage()));
+            System.out.println(String.format("RndFileWriter - IO Exception occurred: %s", exc.getMessage()));
         }
 
     }
