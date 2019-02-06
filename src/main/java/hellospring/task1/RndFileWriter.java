@@ -35,7 +35,7 @@ public class RndFileWriter {
             System.out.println("File wasn't opened");
             return;
         }
-        
+
         try{
             fileWriter.write(String.format("%s %s \n", event.getEventTime(), event.getValue()));
         }
@@ -52,6 +52,7 @@ public class RndFileWriter {
             try {
                 fileWriter.flush();
                 fileWriter.close();
+                isFileOpened = false;
             }
             catch (IOException exc){
                 System.out.println(String.format("RndFileWriter - cant close a file: %s", exc.getMessage()));
